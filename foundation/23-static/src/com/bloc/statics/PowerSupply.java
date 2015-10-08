@@ -7,7 +7,7 @@ package com.bloc.statics;
 import com.bloc.statics.appliances.*;
 
 public class PowerSupply extends Object {
-	private Appliance[] mAppliances;
+	private static Appliance[] mAppliances;
 
 	public PowerSupply() {
 		this(new Appliance[0]);
