@@ -19,7 +19,15 @@ class Song extends Object {
 	 *	ASSIGNMENT:
 	 *	Create the first Song constructor
 	/************************************************/
-
+	Song()
+	{
+		Artist [] artists = new Artist[2];
+			artists[0] = new Artist("John","Lennon");
+			artists[1] = new Artist("Mick","Jagger");
+		mEnsemble = new Ensemble(artists);
+		mTitle = "Born in the USA";
+		mYearReleased = 1999;
+	}
 	/*
 	 * Song
 	 *
@@ -32,7 +40,11 @@ class Song extends Object {
 	 *	ASSIGNMENT:
 	 *	Create the second Song constructor
 	/************************************************/
-
+	Song(Ensemble ensemble, String title)
+	{
+		mEnsemble = ensemble;
+		mTitle = title;
+	}
 	/*
 	 * Song
 	 *
@@ -40,6 +52,12 @@ class Song extends Object {
 	 * @param title the song title (String)
 	 * @param yearReleased the year the song was released (int)
 	 */
+	Song(Ensemble ensemble, String title, int yearReleased)
+	{
+		mEnsemble = ensemble;
+		mTitle = title;
+		mYearReleased = yearReleased;
+	}
 	/************************************************
 	 *	ASSIGNMENT:
 	 *	Create the third Song constructor
