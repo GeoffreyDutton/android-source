@@ -22,7 +22,7 @@ public interface SalsaDancer {
 	 *
 	 * @return nothing
 	 */
-	public void findApartner();
+	public void findAPartner();
 	/*
 	 * salsa
 	 *
@@ -30,4 +30,5 @@ public interface SalsaDancer {
 	 *
 	 * @return nothing
 	 */
+	public void salsa();
 }

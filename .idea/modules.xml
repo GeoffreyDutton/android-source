@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/foundation/07-jdk/07-jdk.iml" filepath="$PROJECT_DIR$/foundation/07-jdk/07-jdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/11-binary/11-binary.iml" filepath="$PROJECT_DIR$/foundation/11-binary/11-binary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/12-syntax/12-syntax.iml" filepath="$PROJECT_DIR$/foundation/12-syntax/12-syntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/13-primitive-data-types/13-primitive-data-types.iml" filepath="$PROJECT_DIR$/foundation/13-primitive-data-types/13-primitive-data-types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/14-best-practices/14-best-practices.iml" filepath="$PROJECT_DIR$/foundation/14-best-practices/14-best-practices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/15-operations/15-operations.iml" filepath="$PROJECT_DIR$/foundation/15-operations/15-operations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/16-logic/16-logic.iml" filepath="$PROJECT_DIR$/foundation/16-logic/16-logic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/17-loops/17-loops.iml" filepath="$PROJECT_DIR$/foundation/17-loops/17-loops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/18-methods/18-methods.iml" filepath="$PROJECT_DIR$/foundation/18-methods/18-methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/19-classes/19-classes.iml" filepath="$PROJECT_DIR$/foundation/19-classes/19-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/20-inheritance/20-inheritance.iml" filepath="$PROJECT_DIR$/foundation/20-inheritance/20-inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/21-objects/21-objects.iml" filepath="$PROJECT_DIR$/foundation/21-objects/21-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/22-security/22-security.iml" filepath="$PROJECT_DIR$/foundation/22-security/22-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/23-static/23-static.iml" filepath="$PROJECT_DIR$/foundation/23-static/23-static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/24-interfaces/24-interfaces.iml" filepath="$PROJECT_DIR$/foundation/24-interfaces/24-interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/25-polymorphism/25-polymorphism.iml" filepath="$PROJECT_DIR$/foundation/25-polymorphism/25-polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/26-generics/26-generics.iml" filepath="$PROJECT_DIR$/foundation/26-generics/26-generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/27-collections/27-collections.iml" filepath="$PROJECT_DIR$/foundation/27-collections/27-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/28-recursion/28-recursion.iml" filepath="$PROJECT_DIR$/foundation/28-recursion/28-recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/29-exceptions/29-exceptions.iml" filepath="$PROJECT_DIR$/foundation/29-exceptions/29-exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/30-singletons/30-singletons.iml" filepath="$PROJECT_DIR$/foundation/30-singletons/30-singletons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foundation/31-threads/31-threads.iml" filepath="$PROJECT_DIR$/foundation/31-threads/31-threads.iml" />
+    </modules>
+  </component>
+</project>

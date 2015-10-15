@@ -13,7 +13,7 @@ public interface Skydiver {
 	 *
 	 * @return nothing
 	 */
-
+	void getInPlane();
 	/*
 	 * jumpFromPlane
 	 *
@@ -21,6 +21,7 @@ public interface Skydiver {
 	 *
 	 * @return nothing
 	 */
+	void jumpFromPlane();
 
 	/*
 	 * releaseParachute
@@ -29,4 +30,5 @@ public interface Skydiver {
 	 *
 	 * @return nothing
 	 */
+	void releaseParachute();
 }
