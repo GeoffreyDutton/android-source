@@ -1,5 +1,8 @@
 package com.bloc.singletons;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /************************************************
  *	ASSIGNMENT:
  *	Populate this class with the defined methods.
@@ -9,6 +12,16 @@ package com.bloc.singletons;
 /************************************************/
 
 public class Speakerphone extends Object {
+	private static Speakerphone sSpeakerphone;
+
+	public static Speakerphone get()
+	{
+		if (sSpeakerphone == null)
+		{
+			sSpeakerphone = new Speakerphone();
+		}
+		return sSpeakerphone;
+	}
 	/*
 	 * get
 	 *
@@ -19,6 +32,16 @@ public class Speakerphone extends Object {
 	 *	Implement the get method
 	/************************************************/
 
+	private ArrayList<Listener> mSpeakerphones;
+
+	private Speakerphone()
+	{
+		mSpeakerphones = new ArrayList<Listener>();
+	}
+public void addListener(Listener listener)
+{
+	mSpeakerphones.add(listener);
+}
 	/*
 	 * addListener
 	 *
@@ -31,7 +54,10 @@ public class Speakerphone extends Object {
 	 *	ASSIGNMENT:
 	 *	Implement the addListener method
 	/************************************************/
-
+public void removeListener(Listener listener)
+	{
+		mSpeakerphones.remove(listener);
+	}
 	/*
 	 * removeListener
 	 *
@@ -44,7 +70,10 @@ public class Speakerphone extends Object {
 	 *	ASSIGNMENT:
 	 *	Implement the removeListener method
 	/************************************************/
-
+public void removeAll()
+{
+	mSpeakerphones.clear();
+}
 	/*
 	 * removeAll
 	 *
@@ -71,7 +100,14 @@ public class Speakerphone extends Object {
 	 *	ASSIGNMENT:
 	 *	Implement the contains method
 	/************************************************/	
-
+public boolean contains(Listener listener)
+{
+	if (mSpeakerphones.contains(listener))
+	{
+		return true;
+	}
+	else return false;
+}
 	/*
 	 * shoutMessage
 	 *
@@ -84,7 +120,13 @@ public class Speakerphone extends Object {
 	 *	ASSIGNMENT:
 	 *	Implement the shoutMessage method
 	/************************************************/
-
+public void shoutMessage(Talker talker)
+{
+	for(Listener listener: mSpeakerphones)
+	{
+		talker.getMessage();
+	}
+}
 	/*
 	 * shoutMessage
 	 *
@@ -103,5 +145,15 @@ public class Speakerphone extends Object {
 	 *	ASSIGNMENT:
 	 *	Implement the shoutMessage method
 	/************************************************/
+public void shoutMessage(Talker talker, Class cls) {
+
+		for(Listener listener : mSpeakerphones)
+		{
+			if(cls.isAssignableFrom(listener.getClass()))
+			{
+				talker.getMessage();
+			}
+		}
+	}
 
 }
