@@ -9,6 +9,7 @@ package com.bloc.exceptions;
  *	this is bad practice.
 /************************************************/
 
+import java.util.IllegalFormatException;
 import java.util.Random;
 
 public class Main extends Object {
@@ -31,26 +32,48 @@ public class Main extends Object {
 	 *	ASSIGNMENT:
  	 *	Catch thrown exceptions
 	/************************************************/
-	private static final void tryGetMax() {
-		int max = 0;
-		max = FunMethods.getMax((Integer[])null);
-		Integer[] numbers = new Integer[50];
-		Random rand = new Random();
-		for (int i = 0; i < 50; i++) {
-			numbers[i] = new Integer(rand.nextInt(500));
+	private static final void tryGetMax()
+	{
+		try
+		{
+			int max = 0;
+			max = FunMethods.getMax((Integer[]) null);
+
+			Integer[] numbers = new Integer[50];
+			Random rand = new Random();
+			for (int i = 0; i < 50; i++)
+			{
+				numbers[i] = new Integer(rand.nextInt(500));
+			}
+			numbers[32] = null;
+			max = FunMethods.getMax(numbers);
+			numbers[32] = new Integer(rand.nextInt(500));
+			max = FunMethods.getMax(numbers);
 		}
-		numbers[32] = null;
-		max = FunMethods.getMax(numbers);
-		numbers[32] = new Integer(rand.nextInt(500));
-		max = FunMethods.getMax(numbers);
+		catch (IllegalArgumentException e)
+		{
+			e.printStackTrace();
+
+		}
 	}
 
 	/************************************************
 	 *	ASSIGNMENT:
  	 *	Catch thrown exceptions
 	/************************************************/
-	private static final void tryRemove() {
-		FunMethods.remove(null, 2);
+	private static final void tryRemove()
+	{
+		try {
+
+
+			FunMethods.remove(null, 2);
+		}
+		catch (IllegalArgumentException e)
+		{
+			e.printStackTrace();
+		}
+		try
+		{
 		Object[] someObjects = new Object[12];
 		someObjects[0] = "a string!";
 		someObjects[1] = new Integer(32);
@@ -61,5 +84,10 @@ public class Main extends Object {
 		}
 		FunMethods.remove(someObjects, 12);
 		someObjects = FunMethods.remove(someObjects, 3);
+		}
+		catch (IndexOutOfBoundsException e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
