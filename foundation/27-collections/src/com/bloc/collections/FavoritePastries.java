@@ -18,7 +18,9 @@ import java.util.*;
  * A pastry may not have duplicate entries
  */
 public class FavoritePastries {
-
+	private HashMap<Integer, List<Pastry>> mPastryMap;
+	private Pastry pastry;
+	private Integer rating;
 	/************************************************
  	 *	ASSIGNMENT:
 	 *	Use a HashMap to store the relationship
@@ -26,10 +28,9 @@ public class FavoritePastries {
 	/************************************************/
 
 
-	public FavoritePastries() {
-		/************************************************
- 	 	 *	WORK HERE
-		/************************************************/
+	public FavoritePastries()
+	{
+		mPastryMap = new HashMap<>();
 	}
 
 	/* 
@@ -47,10 +48,13 @@ public class FavoritePastries {
 	 * @param rating The rating to associate with it
 	 * @return nothing
 	 */
-	public void addPastry(Pastry pastry, int rating) {
-		/************************************************
- 	 	 *	WORK HERE
-		/************************************************/
+	public void addPastry(Pastry aPastry, int aRating)
+	{
+		List<Pastry> pastryList = new ArrayList<Pastry>();
+		pastryList.add(aPastry);
+		mPastryMap.put(aRating, pastryList);
+		pastry = aPastry;
+		rating = aRating;
 	}
 
 	/* 
@@ -65,11 +69,19 @@ public class FavoritePastries {
 	 * @return true if the Pastry was found and removed,
 	 *		   false otherwise
 	 */
-	public boolean removePastry(Pastry pastry) {
-		/************************************************
- 	 	 *	WORK HERE, you must modify the return value
-		/************************************************/
-		return false;
+	public boolean removePastry(Pastry aPastry)
+	{
+		boolean isExists;
+		isExists = mPastryMap.containsValue((aPastry));
+		mPastryMap.remove(aPastry);
+		if (isExists == true)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	/* 
@@ -86,11 +98,26 @@ public class FavoritePastries {
 	 * @return the rating associated with this Pastry or
 	 *		   -1 if not found among FavoritePastries
 	 */
-	public int getRatingForPastry(Pastry pastry) {
+	public int getRatingForPastry(Pastry aPastry)
+	{
 		/************************************************
  	 	 *	WORK HERE, you must modify the return value
 		/************************************************/
-		return -1;
+		//boolean isExists;
+		//isExists = mPastryMap.values().toString().equals(aPastry.toString());
+		//System.out.println(mPastryMap.values().toString());
+		if (aPastry == null)
+		{
+			return -1;
+		}
+		else if (mPastryMap.values().toString().contains(aPastry.toString()))
+		{
+			return rating;
+		}
+		else
+		{
+			return -1;
+		}
 	}
 
 	/* 
@@ -111,9 +138,27 @@ public class FavoritePastries {
 	 */
 	public Collection<Pastry> getPastriesForRating(int rating) {
 		/************************************************
- 	 	 *	WORK HERE, you must modify the return value
-		/************************************************/
-		return null;
-	}
+		 *	WORK HERE, you must modify the return value
+		 /************************************************/
+		Set<Pastry> mPastrySet = new HashSet<>();
+		Iterator iterator = mPastrySet.iterator();
+		while (iterator.hasNext())
+		{
+			if (pastry.hashCode() == rating)
+			{
+				mPastrySet.add(pastry);
+			}
 
+		}//End while
+
+		if (mPastrySet.isEmpty()) {
+			return Collections.emptySet();
+		}
+		else
+		{
+			return mPastrySet;
+		}
+
+
+	}
 }
